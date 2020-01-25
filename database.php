@@ -12,12 +12,10 @@ if ($conn->connect_error) {
 }
 
 // sql to create table
-$sql = "CREATE TABLE fembed (
+$sql = "CREATE TABLE view (
 id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-url VARCHAR(100) NOT NULL,
 title VARCHAR(3000) NOT NULL,
-poster VARCHAR(3000) NOT NULL,
-duration VARCHAR(3000) NOT NULL
+poster VARCHAR(3000) NOT NULL
 )";
 
 if ($conn->query($sql) === TRUE) {
