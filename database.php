@@ -12,10 +12,10 @@ if ($conn->connect_error) {
 }
 
 // sql to create table
-$sql = "CREATE TABLE view (
+$sql = "CREATE TABLE login (
 id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-title VARCHAR(3000) NOT NULL,
-poster VARCHAR(3000) NOT NULL
+username VARCHAR(3000) NOT NULL,
+password VARCHAR(3000) NOT NULL
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -23,6 +23,9 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error creating table: " . $conn->error;
 }
+
+INSERT INTO login (username, password)
+VALUES ('admin', 'M@tkh@u991996');
 
 $conn->close();
 ?>
